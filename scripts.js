@@ -18,6 +18,11 @@ function updateCountDown() {
   const h = Math.floor(diff / 1000 / 60 / 60) % 24; //hours
   const m = Math.floor(diff / 1000 / 60) % 60; //minutes
   const s = Math.floor(diff / 1000) % 60; //seconds
+
+  days.innerHTML = d;
+  hours.innerHTML = h < 10 ? '0' + h : h;
+  minutes.innerHTML = m < 10 ? '0' + m : m;
+  seconds.innerHTML = s < 10 ? '0' + s : s;
 };
 
 setInterval(updateCountDown, 1000); //will update the function every second
